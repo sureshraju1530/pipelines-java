@@ -20,12 +20,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    
- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Free Trial(1)(40ff0f41-99f2-4f24-893f-2f84ebba0f85)'
-    subscriptionId: '40ff0f41-99f2-4f24-893f-2f84ebba0f85'
-    action: 'Create Or Update Resource Group'
-    templateLocation: 'Linked artifact'
-    deploymentMode: 'Incremental'
